@@ -7,7 +7,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-add_executable(Parallel_programming_ main.cpp thread.cpp thread.h)
+add_executable(Parallel_programming_ main.cpp thread.cpp thread.h
+        pthreader.cpp)
 
 # Enlazar la biblioteca pthread
 target_link_libraries(Parallel_programming_ PRIVATE Threads::Threads)
